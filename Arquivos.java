@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-class Arquivos{
-  public void createFile(String path){
+class Arquivos{ //Creation of class the class that will be used for file creation in Main.java
+  public void createFile(String path){ // create method
     try{
       File arq = new File(path);
       if(arq.createNewFile()){
@@ -19,7 +19,7 @@ class Arquivos{
     }
     
   }
-  public void writeFile(String path, String texto){
+  public void writeFile(String path, String texto){ //Write in file method
     try{
       FileWriter arq1 = new FileWriter(path,true);
       arq1.write(texto);
@@ -28,7 +28,7 @@ class Arquivos{
       System.out.println("Arquivo nao pode ser escrito ");
     }
   }
-  public void readFile(String path){
+  public void readFile(String path){ //Read method
     try{
       FileReader arq2 = new FileReader(path);
       Scanner scr = new Scanner(arq2);
@@ -41,7 +41,7 @@ class Arquivos{
       e.printStackTrace();
     }
   }
-  public void deleteFile(String path){
+  public void deleteFile(String path){ //Delete file method
     try{
       File arq = new File(path);
       if(arq.delete()){
@@ -54,7 +54,7 @@ class Arquivos{
       e.printStackTrace();  
     }
   }
-  public void createDir(String path){
+  public void createDir(String path){ //Create directory method
     try{
       File dir = new File(path);
       if(dir.mkdir()){
@@ -65,7 +65,7 @@ class Arquivos{
       e.printStackTrace();
     }
   }
-  public void listDir(String path){
+  public void listDir(String path){ //Use contents of directory and array them
     try{
       File arq = new File(path);
       String lista[] = arq.list();
@@ -77,7 +77,7 @@ class Arquivos{
       e.printStackTrace();
     }
   }
-  public void readFileArray(String path){
+  public void readFileArray(String path){ //Read Array contents inside a file
     ArrayList items = new ArrayList<String>();
     try{
       FileReader arq2 = new FileReader(path);
